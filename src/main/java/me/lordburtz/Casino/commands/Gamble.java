@@ -108,7 +108,7 @@ public class Gamble implements CommandExecutor, TabCompleter {
             dice_color = ChatColor.RED + "Red";
         } else if (rand < (config.getInt("probability.red") + config.getInt("probability.black"))){
             dice = "black";
-            dice_color = ChatColor.BLACK + "Black";
+            dice_color = ChatColor.DARK_GRAY + "Black";
         } else {
             dice = "green";
             dice_color = ChatColor.GREEN + "Green";
@@ -117,7 +117,7 @@ public class Gamble implements CommandExecutor, TabCompleter {
         if (!strings[1].equals(dice)) {
             commandSender.sendMessage(ChatColor.RED + prefix +plugin.getConfig().getString("loose-msg"));
             if (config.getBoolean("global")) {
-                plugin.getServer().broadcastMessage(ChatColor.RED + prefix + commandSender.getName() + " has lost $" + amount);
+                plugin.getServer().broadcastMessage(ChatColor.RED + prefix + commandSender.getName() + " has lost $" + amount + ".");
             }
             return true;
         } else {
@@ -132,7 +132,7 @@ public class Gamble implements CommandExecutor, TabCompleter {
             int won = amount * multiplier;
             econ.depositPlayer(player, won);
             if (config.getBoolean("global")) {
-                plugin.getServer().broadcastMessage(ChatColor.GOLD + prefix + commandSender.getName() + " has won $" + won);
+                plugin.getServer().broadcastMessage(ChatColor.GOLD + prefix + commandSender.getName() + " has won $" + won + ".");
             }
             commandSender.sendMessage(ChatColor.GOLD + prefix + config.getString("win-msg").replace("%amount%", String.valueOf(won))); return true;
         }
