@@ -1,0 +1,11 @@
+main: me.lordburtz.Casino.Main
+version: 1.0
+name: casino
+authors: ["LordBurtz", "Fingolf1n"]
+website: "https://github.com/LordBurtz"
+
+commands:
+  roulette:
+    aliases: []
+  casino:
+    aliases: []

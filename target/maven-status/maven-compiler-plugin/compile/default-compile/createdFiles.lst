@@ -1,0 +1,4 @@
+me/lordburtz/Casino/Main.class
+me/lordburtz/Casino/data/Data.class
+me/lordburtz/Casino/commands/Gamble.class
+me/lordburtz/Casino/commands/CreateCasino.class
